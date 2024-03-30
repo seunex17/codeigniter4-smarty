@@ -1,0 +1,42 @@
+{
+    "name": "seunex17/codeigniter4-smarty",
+    "description": "A smarty template engine for Codeigniter4",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "seunex17",
+        "codeigniter4",
+        "smarty",
+        "template"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Seunex17\\Codeigniter4Smarty\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "seunex17",
+            "email": "seunexseun@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "codeigniter4/devkit": "^1.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix --ansi --verbose --diff"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "codeigniter4/framework": "^4.0",
+        "codeigniter4/settings": "^2.2",
+        "smarty/smarty": "^5.0"
+    }
+}
