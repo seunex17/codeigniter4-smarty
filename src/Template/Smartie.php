@@ -33,7 +33,12 @@
 			static::$smarty = new Smarty();
 
 			// Set smarty template directory
-			self::$smarty->setTemplateDir(APPPATH . "Views/templates/". setting()->get('Smartie.activeTemplate'));
+			if (setting('Smartie.enableTheme'))
+			{
+				self::$smarty->setTemplateDir(APPPATH . "Views/". setting()->get('Smartie.activeTemplate'));
+			} else {
+				self::$smarty->setTemplateDir(APPPATH . "Views/");
+			}
 
 			// Set smarty compile directory
 			self::$smarty->setCompileDir(WRITEPATH . "templates_c");

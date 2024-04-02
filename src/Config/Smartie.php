@@ -17,6 +17,8 @@
 
 		public array $templates = ['default'];
 
-		public string $activeTemplate = 'default';
+		public bool $enableTheme = false;
+
+		public string $activeTheme = 'default';
 
 	}

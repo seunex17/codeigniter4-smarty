@@ -69,6 +69,7 @@ class Home extends BaseController
 ```
 
 * View
+> app/Views/test.tpl
 ```html
 <!doctype html>
 <html lang="en">
@@ -85,7 +86,7 @@ class Home extends BaseController
 
 ```
 
-To lean more about the smarty tag you can check out the smarty official documentation here: https://smarty-php.github.io/smarty/stable/
+To learn more about the smarty tag you can check out the smarty official documentation here: https://smarty-php.github.io/smarty/stable/
 
 <br />
 
