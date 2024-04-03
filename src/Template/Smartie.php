@@ -43,6 +43,16 @@
 			// Set smarty compile directory
 			self::$smarty->setCompileDir(WRITEPATH . "templates_c");
 
+			//* Enable modifiers
+			$modifiers = setting('Smartie.modifiers');
+			if ($modifiers)
+			{
+				foreach ($modifiers as $modifier)
+				{
+					self::$smarty->registerPlugin('modifier', $modifier, $modifier);
+				}
+			}
+
 			// Make sure our compile directory is writable
 			// If not writable we need to set the write permission.
 			if (!is_writable(self::$smarty->getCompileDir()))
@@ -51,7 +61,7 @@
 				@chmod(self::$smarty->getCompileDir(), 0777);
 			}
 
-			// Smartie debug mode configuration
+			// Smarty debug mode configuration
 			if (!self::$smarty->getDebug())
 			{
 				self::$smarty->setErrorReporting(false);
