@@ -48,4 +48,11 @@
 		 */
 		public array $modifiers = [];
 
+		/**
+		 * Global variable that can be use anyway in your app
+		 *
+		 * @var array
+		 */
+		public array $globalVariables = [];
+
 	}

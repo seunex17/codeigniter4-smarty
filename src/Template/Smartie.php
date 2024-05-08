@@ -13,6 +13,7 @@
 
 	namespace Seunex17\Codeigniter4Smarty\Template;
 
+	use phpDocumentor\Reflection\Types\Self_;
 	use Smarty\Smarty;
 
 	class Smartie {
@@ -50,6 +51,16 @@
 				foreach ($modifiers as $modifier)
 				{
 					self::$smarty->registerPlugin('modifier', $modifier, $modifier);
+				}
+			}
+
+			//* Global variables
+			$globalVariables = setting('Smartie.globalVariables');
+			if ($globalVariables)
+			{
+				foreach($globalVariables as $key => $value)
+				{
+					Self_:self::$smarty->assign($key, $value);
 				}
 			}
 

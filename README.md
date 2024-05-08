@@ -121,6 +121,11 @@ You publish fiel should now be located at app/Configs/Smartie.php
 public array $modifiers = ['base_url', 'site_url'];
 ```
 
+* Declare global variables
+```php
+public array $globalVariables = ['name', 'John Doe'];
+```
+
 To learn more about the smarty tag you can check out the smarty official documentation here: https://smarty-php.github.io/smarty/stable/
 
 <br />
